@@ -71,12 +71,12 @@
 					<section>
 						<h2>Web 3.0 ?</h2>
 						<ul>
-							<li>Cloud computing</li>
-							<li>Web Mobile</li>
-							<li>High power of personalization </li>
-							<li>Evolved Search (accept command)</li>
-							<li>Data integration and portability</li>
-							<li>Move to NoSql Databases (graph and triple stores)</li>
+							<li class="fragment grow">Cloud computing</li>
+							<li class="fragment grow">Web Mobile</li>
+							<li class="fragment grow">High power of personalization </li>
+							<li class="fragment grow">Evolved Search (accept command)</li>
+							<li class="fragment grow">Data integration and portability</li>
+							<li class="fragment grow">Move to NoSql Databases (graph and triple stores)</li>
 						</ul>
 					</section>
 					<section>
@@ -115,9 +115,92 @@ The “intelligent agents” people have touted for ages will finally materializ
 					    <p>And <a href="http://lod-cloud.net/" target="_blank">now</a></p>
 					</section>
 				</section>
-				
 				<section>
-				
+					<section>
+						<h1>Give more sens to your data!</h1>
+						<img src="images/semantic-cube.png" alt="semantix cube" />
+					</section>
+					<section>
+						<h2>Semantic web already exists...</h2>
+						<ul>
+							<li class="fragment roll-in">HTML / HTML5</li>
+							<li class="fragment roll-in">Atom, RSS</li>
+							<li class="fragment roll-in">Microdata</li>
+							<li class="fragment roll-in">RDF</li>
+						</ul>
+					</section>
+					<section>
+						<h2>HTML <img src="images/html5-semantics.png" alt="5" class="inline" /></h2>
+<pre><code>&lt;header&gt;
+    &lt;h1&gt;Title&lt;/h1&gt;
+    &lt;h2&gt;Subtitle&lt;/h2&gt;
+    &lt;nav&gt;
+        &lt;ul&gt;
+            &lt;li&gt;Menu 1&lt;/li&gt;
+            &lt;li&gt;Menu 2&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/nav&gt;
+&lt;/header&gt;
+&lt;section&gt;
+    &lt;article id="news1"&gt;
+        &lt;h1&gt;title&lt;/h1&gt;
+        &lt;time value="" /&gt;
+    &lt;/article&gt;
+    &lt;article id="news2"&gt;
+        &lt;h1&gt;title&lt;/h1&gt;
+        &lt;time value="" /&gt;
+    &lt;/article&gt;
+&lt;/section&gt;
+&lt;aside&gt;My links&lt;/aside&gt;
+&lt;footer&gt;Copyright&lt;/footer&gt;</code></pre>
+					</section>
+					<section>
+						<h2>RSS <img src="images/rss.png" alt="feed" class="inline" /></h2>
+<pre><code>
+&lt;rss version="2.0"&gt;
+    &lt;channel&gt;
+        &lt;title&gt;W3Schools Home Page&lt;/title&gt;
+        &lt;link&gt;http://www.w3schools.com&lt;/link&gt;
+        &lt;description&gt;Free web building tutorials&lt;/description&gt;
+        &lt;item&gt;
+            &lt;title&gt;RSS Tutorial&lt;/title&gt;
+            &lt;link&gt;http://www.w3schools.com/rss&lt;/links&gt;
+            &lt;description&gt;New RSS tutorial on W3Schools&lt;/description&gt;
+        &lt;/item&gt;
+        &lt;item&gt;
+            &lt;title&gt;XML Tutorial&lt;/title&gt;
+            &lt;link&gt;http://www.w3schools.com/xml&lt;/link&gt;
+            &lt;description&gt;New XML tutorial on W3Schools&lt;/description&gt;
+        &lt;/item&gt;
+    &lt;/channel&gt;
+&lt;/rss&gt; 
+</code></pre>
+					</section>
+					<section>
+						<h2>Microdata</h2> 
+						<p><a href="http://schema.org">schema.org</a></p>
+<pre><code>
+&lt;section itemscope itemtype="http://schema.org/Person"&gt; 
+    Hello, my name is 
+    &lt;span itemprop="name"&gt;Bertrand Chevrier&lt;/span&gt;, 
+    You can visit my blog at 
+    &lt;a href="http://krampstudio.com" itemprop="url"&gt;krampstudio.command&lt;/a&gt;. 
+    I am a 
+    &lt;span itemprop="jobTitle"&gt;technical expert&lt;/span&gt; 
+    for
+    &lt;span itemprop="worksFor"&gt;CGI&lt;/span&gt;, 
+    located at
+    &lt;section itemprop="workLocation" itemscope itemtype="http://schema.org/Place"&gt;
+    	&lt;section itemprop="address" itemscope itemtype="http://schema.org/PostalAdress"&gt;
+            &lt;span itemprop="streetAddress"&gt;7 za Bourmicht&lt;/span&gt;,
+            &lt;span itemprop="addressLocality"&gt;Bertrange&lt;/span&gt;,
+            &lt;span itemprop="addressRegion"&gt;Luxembourg&lt;/span&gt;.
+        &lt;/section&gt;
+        &lt;a href="https://maps.google.lu/maps/place?ftid=0x4795495440640fdb:0x96de6cd68cc3d24b" itemprop="map"&gt;See the map&lt;/a&gt;
+    &lt;/section&gt;
+&lt;/section&gt;
+</code></pre>
+					</section>
 				</section>
 
 			
