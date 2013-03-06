@@ -249,7 +249,7 @@ The “intelligent agents” people have touted for ages will finally materializ
                     </section>
                     <section>
                         <h2>RDF Schema</h2>
-                        <p style="text-align:left;">Extends RDF to build ontologies</p>
+                        <p>Extends RDF to build ontologies</p>
                         <ul>
                             <li>Classes and subclasses</li>
                             <li>Properties and subproperties
