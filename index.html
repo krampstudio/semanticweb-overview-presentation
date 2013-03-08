@@ -100,11 +100,11 @@ The “intelligent agents” people have touted for ages will finally materializ
 					<section>
 					    <h2><img src="images/opendata.png" alt="opendata" /></h2>
 					    <div style="text-align:left; width:100%;">
-★  Unfiltered data online<br />
-★ ★  Structured<br />
-★ ★ ★ 	Free license and not in a proprietary format<br />
-★ ★ ★ ★  URI are used to identified the data<br />
-★ ★ ★ ★ ★ 	Data linked to others to give them a context
+<span class="fragment roll-in">★  Unfiltered data online</span><br />
+<span class="fragment roll-in">★ ★ Structured</span><br />
+<span class="fragment roll-in">★ ★ ★ 	Free license and not in a proprietary format</span><br />
+<span class="fragment roll-in">★ ★ ★ ★  URI are used to identified the data</span><br />
+<span class="fragment roll-in">★ ★ ★ ★ ★ 	Data linked to others to give them a context</span>
 					    </div>
 					</section>
 					<section>
@@ -227,10 +227,11 @@ The “intelligent agents” people have touted for ages will finally materializ
                         <img src="images/rdf-triple.png" alt="spo" />
                     </section>
                     <section>
-                        <h2>RDF</h2>
-<pre><code>&lt;rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:cd="http://www.recshop.fake/cd#"&gt;
+                        <h2>RDF <img src="images/rdf.gif" class="inline"/></h2>
+<pre><code>&lt;rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+  xmlns:cd="http://www.recshop.fake/cd#"&gt;
 
-&lt;rdf:Description rdf:about="http://www.recshop.fake/cd/Empire Burlesque"&lt;
+&lt;rdf:Description rdf:about="http://www.recshop.fake/cd/Empire Burlesque"&gt;
   &lt;cd:artist&gt;Bob Dylan&lt;/cd:artist&gt;
   &lt;cd:country&gt;USA&gt;/cd:country&gt;
   &lt;cd:company&gt;Columbia&lt;/cd:company&gt;
@@ -261,8 +262,55 @@ The “intelligent agents” people have touted for ages will finally materializ
                         </ul>
                         <p><a href="taotest.rdf" target="_blank">example</a></p>
                     </section>
+                    <section>
+						<h2>SPARQL</h2>
+<pre><code>
+PREFIX cd: &lt;http://www.recshop.fake/cd&gt;
+SELECT ?album, ?year
+WHERE {
+	?album cd:artist "Bob Dylan" .
+	?album cd:year ?year
+}
+</pre></code>
+                    </section>
                 </section>
-			
+				<section>
+					<section>
+						<h1>Real world</h1>
+					</section>
+					<section>
+						<h2>RDF APIs</h2>
+						<ul>
+							<li>Java : <a href="http://jena.apache.org">Apahce Jena</a></li>
+							<li>PHP : <a href="http://wifo5-03.informatik.uni-mannheim.de/bizer/rdfapi/index.html">RAP</a></li>
+							<li>Python : <a href="https://github.com/RDFLib">rdflib</a></li>
+							<li>C# : <a href="http://www.dotnetrdf.org/">dotNetRDF</a></li>
+							<li>...</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Apache <img src="images/jena.png" class="inline" alt="Jena"/></h2>
+<pre><code>
+// create an empty Model
+Model model = ModelFactory.createDefaultModel();
+
+// create a new resource
+Resource album = model.createResource("http://www.recshop.fake/cd/Hide your heart")	
+						.addProperty("http://www.recshop.fake/cd#artist", "Bob Dylan")
+						.addProperty("http://www.recshop.fake/cd#year", "1988");
+
+//display the graph
+model.write(new PrintWriter(System.out));
+</pre></code>
+					</section>
+					<section>
+						<h2>Triple store</h2>
+						<ul>
+							<li>Proprietary: <a href="http://www.virtuoso.com/">Virtuoso</a>,  <a href="http://www.franz.com/agraph/allegrograph/">AllegroGraph</a>, <a href="http://www.oracle.com/technetwork/database-options/spatialandgraph/overview/rdfsemantic-graph-1902016.html">Oracle Spatial and Graph</a></li>
+							<li>Open source: <a href="http://www.bigdata.com/">BigData</a>, <a href="http://www.openrdf.org">Sesame</a>, <a href="http://www.mulgara.org/">Mulgara</a></li>
+						</ul>
+					</section>
+				</section>
 
 			</div>
 
